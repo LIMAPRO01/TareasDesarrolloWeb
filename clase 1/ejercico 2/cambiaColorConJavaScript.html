@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambia Color con JavaScript</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color : white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        </style>
+</head>     
+<body>
+
+    <h1>Cambia el Color de Fondo</h1>
+
+<button onclick="cambiarColor()">Cambiar color de fondo</button>
+
+<script>
+  function cambiarColor() {
+    const colores = ['#d1e0e0', '#f0c0ff', '#ffe4b5', '#cce5ff', '#f9f9f9'];
+    const random = Math.floor(Math.random() * colores.length);
+    document.body.style.backgroundColor = colores[random];
+  }
+</script>

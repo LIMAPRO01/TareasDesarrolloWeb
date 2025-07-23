@@ -1,0 +1,28 @@
+body {
+    background-color: #f0f8ff;
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* tipografía agradable */
+  margin: 0;
+}
+
+.tarjeta {
+    border: 1px solid #ee0e0e;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    background-color: #6defd5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.tarjeta img {
+    border: 1px solid #280eee;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
