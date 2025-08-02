@@ -1,0 +1,112 @@
+/* === Estilo general del cuerpo === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eef7f5;
+  display: flex; /* permite menú lateral fijo y contenido a la derecha */
+}
+
+/* === Encabezado superior (fijo) === */
+header {
+  background-color: lab(38.83% 28.56 -65.64); /* color base */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Estilo del texto dentro del header */
+header h1 {
+  margin-top: 0;
+}
+
+/* === Menú lateral (nav) === */
+nav {
+  width: 200px;
+  min-height: 100vh;
+  background-color: #ebee0b;
+  padding-top: 0px; /* altura*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Título del menú */
+.titulo-menu {
+  color: rgb(250, 247, 247);
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  background-color: #004d40;
+  border-bottom: 2px solid #ffffff33;
+}
+
+/* Lista de enlaces dentro del nav */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo general para enlaces del menú */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #306cc5;
+  border-bottom: 1px solid #004d40;
+  display: block;
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+nav ul li a:hover {
+  background-color: #004d40;
+}
+
+/* === Contenido principal (main) === */
+main {
+  margin-left: 200px; /* espacio para dejar visible el menú lateral */
+  padding: 20px 10px 10px; /* arriba 90 para no tapar con header */
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Sección de contenido centrado */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 90px;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(235, 8, 8, 0.1);
+}
+
+/* Títulos dentro del contenido */
+h2 {
+  color: #004d40;
+  margin-top: 1.5rem;
+}
+
+/* Párrafos y listas */
+p,
+ul li {
+  text-align: justify;
+  line-height: 1.6;
+}
+/* Estilo para el iframe del mapa */
+.mapa {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
