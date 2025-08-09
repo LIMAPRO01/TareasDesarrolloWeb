@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coca-Cola - Noticias</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function toggleContenido(id) {
+      const contenido = document.getElementById(id);
+      if (contenido.style.display === 'none' || contenido.style.display === '') {
+        contenido.style.display = 'block';
+      } else {
+        contenido.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Coca-Cola</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="productos.html">Productos</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a href="responsabilidad.html">Responsabilidad Social</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Últimas Noticias</h2>
+
+    <article>
+      <h3>Nueva campaña ecológica en 2025</h3>
+      <img src="https://www.coca-cola.com/content/dam/journey/us/en/eco-campaign.jpg" alt="Campaña ecológica" width="300" />
+      <p>Iniciamos una ambiciosa campaña de reciclaje en todo el mundo...</p>
+      <button onclick="toggleContenido('noticia1')">Leer más</button>
+      <p id="noticia1" style="display:none;">
+        Coca-Cola lanzará nuevas iniciativas para reducir plásticos y promover el reciclaje, colaborando con comunidades locales y ONGs ambientales.
+      </p>
+    </article>
+
+    <article>
+      <h3>Lanzamiento de nuevo sabor energético</h3>
+      <img src="https://www.coca-cola.com/content/dam/journey/us/en/energy-drink-new.jpg" alt="Nuevo sabor energético" width="300" />
+      <p>Presentamos un nuevo sabor de bebida energética para los jóvenes...</p>
+      <button onclick="toggleContenido('noticia2')">Leer más</button>
+      <p id="noticia2" style="display:none;">
+        Este nuevo sabor combina ingredientes naturales y una fórmula innovadora para brindar energía y sabor único a nuestros consumidores.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Coca-Cola Company. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

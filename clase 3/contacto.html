@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coca-Cola - Contáctanos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const asunto = document.getElementById('asunto').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      let error = '';
+
+      if (nombre === '') error += 'Por favor, ingresa tu nombre.\n';
+      if (correo === '' || !correo.includes('@')) error += 'Por favor, ingresa un correo válido.\n';
+      if (asunto === '') error += 'Por favor, ingresa un asunto.\n';
+      if (mensaje === '') error += 'Por favor, ingresa un mensaje.\n';
+
+      if (error !== '') {
+        alert(error);
+      } else {
+        alert('Gracias por contactarnos, ' + nombre + '. Responderemos pronto.');
+        document.getElementById('contactoForm').reset();
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Coca-Cola</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="productos.html">Productos</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a href="responsabilidad.html">Responsabilidad Social</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contáctanos</h2>
+    <form id="contactoForm" onsubmit="validarFormulario(event)">
+      <label for="nombre">Nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" /><br /><br />
+
+      <label for="correo">Correo electrónico:</label><br />
+      <input type="email" id="correo" name="correo" /><br /><br />
+
+      <label for="asunto">Asunto:</label><br />
+      <input type="text" id="asunto" name="asunto" /><br /><br />
+
+      <label for="mensaje">Mensaje:</label><br />
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea><br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <section style="margin-top: 2rem;">
+      <h3>Nuestra ubicación</h3>
+      <!-- Mapa embebido ejemplo con Google Maps (ficticio) -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799145291!2d-74.25987568720623!3d40.6971494223641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b028d
